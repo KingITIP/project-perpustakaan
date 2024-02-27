@@ -9,23 +9,21 @@ import java.util.Scanner;
  * @author zamza
  */
 public class adminLogin {
-    public static void login(String[] args) {
-        // Username dan password yang diizinkan
-        String allowedUsername = "admin";
-        String allowedPassword = "admin";
-
-        // Membaca input dari pengguna
+    private static void adminLogin() {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Masukkan username: ");
         String enteredUsername = scanner.nextLine();
         System.out.print("Masukkan password: ");
         String enteredPassword = scanner.nextLine();
 
-        // Memeriksa apakah username dan password sesuai
+        String allowedUsername = "admin";
+        String allowedPassword = "admin";
+
         if (enteredUsername.equals(allowedUsername) && enteredPassword.equals(allowedPassword)) {
-            System.out.println("Login berhasil. Selamat datang, " + allowedUsername + "!");
+            System.out.println("Succsesful Login as Admin");
         } else {
-            System.out.println("Login gagal. Username atau password salah.");
+            System.out.println("Admin User Not Found!!");
         }
     }
     

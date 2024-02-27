@@ -9,25 +9,22 @@ import java.util.Scanner;
  * @author zamza
  */
 public class studentLogin {
-    public static void login(String[] args) {
+    private static void studentLogin() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Masukkan string dengan 15 digit angka: ");
+        System.out.print("Enter your NIM: ");
         String input = scanner.nextLine();
 
-        // Memeriksa apakah panjang string tepat 15 karakter
         if (input.length() != 15) {
-            System.out.println("Error: String harus terdiri dari 15 digit angka.");
-            return;  // Keluar dari program
+            System.out.println("Error: User Not Found.");
+            return;
         }
 
-        // Memeriksa apakah semua karakter adalah digit
         if (!input.matches("\\d+")) {
-            System.out.println("Error: String harus terdiri dari digit angka.");
-            return;  // Keluar dari program
+            System.out.println("Error: NIM harus terdiri dari digit angka.");
+            return;
         }
 
-        // Jika lolos semua pemeriksaan, cetak hasilnya
-        System.out.println("Input yang valid: " + input);
+        System.out.println("Successful Login as Student");
     }
 }
